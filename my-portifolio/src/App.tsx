@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import Home from "./pages/Home/home"
 
-const App= () => {
 
+function App() {
+;
 
   return (
     <>
-     
+      <Home/>
     </>
   )
 }
