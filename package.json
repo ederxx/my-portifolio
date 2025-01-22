@@ -5,6 +5,9 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.4.0"
+    "@mui/material": "^6.4.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "gsap": "^3.12.7"
   }
 }
