@@ -55,7 +55,7 @@ const StyledImg=styled("img") (()=> ({
   
   <StyledButton onClick = {()=> window.location.href = 'https://drive.google.com/file/d/1BYevxQKK6v5okm2DiBRMtt6N0j8UgFVL/view?usp=sharing'}>
     <DownloadIcon /> 
-<Typography> Download CV</Typography> 
+<Typography> Curriculum</Typography> 
  </StyledButton>
 
 
@@ -64,7 +64,7 @@ const StyledImg=styled("img") (()=> ({
     
     <Grid item xs={12} md={4}display="flex" justifyContent="center">
     <StyledButton onClick = {()=> window.location.href = 'https://w.app/RLEH1U'}> 
-    <EmailIcon /><Typography>Contact me</Typography>
+    <EmailIcon /><Typography>Whatsapp</Typography>
     </StyledButton>
       
       </Grid>
