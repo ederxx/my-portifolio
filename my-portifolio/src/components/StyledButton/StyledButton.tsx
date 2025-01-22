@@ -1,16 +1,17 @@
-import styled from "styled-components"
-import theme from "../../theme"
+import { styled } from "@mui/material"
 import { ReactNode } from "react"
 
 interface StyledButtonProps {
     children: ReactNode
+    onClick: ()=> void
 }
 
 
-const StyledButton: React.FC<StyledButtonProps>= ({children} )=> {
-    const StyledButton = styled("button")(() => ({
+const StyledButton: React.FC<StyledButtonProps>= ({children, onClick} )=> {
+
+    const StyledButton = styled("button")(({theme}) => ({
         backgroundColor:"transparent",
-        border:`10px${theme.palette.primary.contrastText}`,
+        border:`1px solid ${theme.palette.primary.contrastText}`,
         borderRadius:"3px",
         padding:"5px 15px",
         width: "100%",
@@ -18,15 +19,15 @@ const StyledButton: React.FC<StyledButtonProps>= ({children} )=> {
         display: 'inline-flex',
         alignItems:'center',
         justifyContent:'center',
-        gaps: '10px',
-       '&:hover': {
-        backgroundColor:`${theme.palette.secondary.light}`,
+        gap: '10px',
+        '&:hover': {
+          backgroundColor: theme.palette.secondary.light
       }
     }))
 
   return (
     <>
-    <StyledButton>{children}</StyledButton>
+    <StyledButton onClick={onClick}>{children}</StyledButton>
     </>
   )
 }

@@ -1,19 +1,26 @@
-import { Box, Container, Grid, Grid2, styled, Typography} from "@mui/material";
+import {  Box, Container, Grid, styled, Typography} from "@mui/material";
 import Avatar from "../../../assets/images/avatar.jpg";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../components/StyledButton/StyledButton";
 import theme from "../../../theme";
-import AnimatedBackground from "../../../components/AnimatedBackground/AnimatedBackground"
+import { AnimatedBackground } from "../../../components/AnimatedBackground/AnimatedBackground"
 
 
 const Hero= () => {
 
-const StyledHero = styled("div")(({theme}) => ({
+  const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
-    display:"flex",
+    display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up('xs')]: { // <= mobile
+        paddingTop: "100px",
+    },
+    [theme.breakpoints.up('md')]: { // > mobile
+
+         paddingTop:'0'
+    }
 }))
 const StyledImg=styled("img") (()=> ({
   width:"60%",
@@ -44,9 +51,9 @@ const StyledImg=styled("img") (()=> ({
 <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Eder Cruz </Typography>
 <Typography color="primary.contrastText" variant="h2" textAlign="center">Psicologo|Gestalt Terapia</Typography>
 <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
-  <Grid item xs={12} md={4} display="flex" justifyContent="center" spacing={3}>
+  <Grid item xs={12} md={4} display="flex" justifyContent="center" >
   
-  <StyledButton >
+  <StyledButton onClick = {()=> window.location.href = 'https://drive.google.com/file/d/1BYevxQKK6v5okm2DiBRMtt6N0j8UgFVL/view?usp=sharing'}>
     <DownloadIcon /> 
 <Typography> Download CV</Typography> 
  </StyledButton>
@@ -56,7 +63,7 @@ const StyledImg=styled("img") (()=> ({
     </Grid>
     
     <Grid item xs={12} md={4}display="flex" justifyContent="center">
-    <StyledButton> 
+    <StyledButton onClick = {()=> window.location.href = 'https://w.app/RLEH1U'}> 
     <EmailIcon /><Typography>Contact me</Typography>
     </StyledButton>
       
